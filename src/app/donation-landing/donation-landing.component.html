@@ -1,0 +1,42 @@
+<body class="background">
+<div>
+        <mat-card class="cause-card">
+
+        <mat-card-header>
+
+          <div mat-card-avatar class="cause-header-image"></div>
+
+          <mat-card-title>{{causename}}</mat-card-title>
+
+        </mat-card-header>
+
+        <img mat-card-image src="../../assets/donation-land-card.jpg" alt="Photo">
+        
+        <mat-card-content>
+          
+          <p>
+            {{causedescription}}
+          </p>
+
+      </mat-card-content>
+
+      </mat-card>
+
+          <div class="details">
+
+            <ul>
+              <li>{{causeid}}</li>
+              <li>{{timestamp}}</li>
+              <li>{{location}}</li>
+              <li>{{receiverId}}</li>
+            </ul>
+            
+          </div>
+
+          <div class="button">
+              <button mat-raised-button (click)="sendDataToDonationMicroservice()" color="primary">DONATE NOW!</button>
+          </div>
+      
+        </div>
+      </body>
+      

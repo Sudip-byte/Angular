@@ -1,0 +1,44 @@
+<body>
+  <div id="body-id">
+<h2 class="causes">Trending Causes</h2>
+
+<section class="causecards"
+  fxLayout
+  fxLayout.sm="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="20px"
+  fxLayoutGap.xs="0"
+  > 
+
+    <app-card *ngFor="let cause of causes" [cause]="cause" class="cause-card"></app-card>
+</section>
+
+<!--RECOMMENDING CAUSES-->
+
+<h2 class="recommend">Recommended Causes</h2>
+
+<section class="recommendcards"
+  fxLayout
+  fxLayout.sm="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="20px"
+  fxLayoutGap.xs="0"
+  > 
+    
+    <app-card *ngFor="let cause of recommendationCauses" [cause]="cause" class="cause-card"></app-card>
+
+</section>
+
+<section class="editbutton"
+  fxLayout
+  fxLayout.sm="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+  > 
+    <mat-chip class="navLinks" selected [routerLink]="['/editdonor']" >Edit Profile</mat-chip>
+ 
+    
+</section>
+</div>
+</body>

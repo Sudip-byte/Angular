@@ -1,0 +1,9 @@
+<section class="causecards"
+ fxLayout
+ fxLayout.sm="column"
+ fxLayoutAlign="center"
+ fxLayoutGap="10px"
+ fxLayoutGap.xs="0"
+ >
+   <app-card *ngFor="let cause of causes" [cause]="cause" class="cause-card"></app-card>
+</section>

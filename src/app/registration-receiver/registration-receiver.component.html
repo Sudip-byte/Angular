@@ -1,0 +1,71 @@
+<div class="back">
+  <section class="register"
+  fxLayout
+  fxLayout.sm="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+  >
+<mat-card class="register">
+<mat-card-header text-align="center">
+    <h3><b>Welcome to Receiver Registration</b></h3>
+</mat-card-header>
+<mat-card-content>
+        <form #form="ngForm" class="my-form">
+           <mat-form-field class="full-width">
+                  <mat-label>USER NAME</mat-label>
+                  <input  matInput  placeholder="Choose yourself an id" #Id="ngModel"  [(ngModel)]="id" name="id"  required>
+                  <div *ngIf=" Id.invalid && (Id.dirty || Id.touched)">
+                        <span *ngIf="Id.hasError('required')">Id is a required field</span>
+                  </div>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>FULL NAME</mat-label>
+                  <input  matInput   placeholder="Enter your full name " #name="ngModel" [(ngModel)]="fullname" name="fullname"  required >
+                  <div *ngIf=" name.invalid && (name.dirty || name.touched)">
+                     <span *ngIf="name.hasError('required')">name is a required field</span>
+                  </div>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>E-MAIL ID</mat-label>
+                  <input  matInput  placeholder="Enter your email" #Email="ngModel" [(ngModel)]="email" name="email"  required email >
+                  <div *ngIf=" Email.invalid && (Email.dirty || Email.touched)">
+                     <span *ngIf="Email.hasError('required')">Email is a required field</span>
+                     <span *ngIf="Email.hasError('email')">Enter valid email</span>
+                  </div>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>PASSWORD</mat-label>
+                  <input  matInput  placeholder="Enter your password" #pass="ngModel" [(ngModel)]="password" name="password" type="password" required>
+                  <div *ngIf=" pass.invalid && (pass.dirty || pass.touched)">
+                     <span *ngIf="pass.hasError('required')">password is a required field</span>
+                  </div>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>PHONE NUMBER</mat-label>
+                  <input  matInput  placeholder="Enter your phone number " #phone="ngModel" [(ngModel)]="phonenumber"  name="phonenumber" number required minlength="10" maxlength="11">
+                  <div *ngIf=" phone.invalid && (phone.dirty || phone.touched)">
+                        <span *ngIf="phone.hasError('required')">phone no  is a required field</span>
+                        <span *ngIf="phone.hasError('minlength')">phone no should have min 10 numbers</span>
+                        <span *ngIf="phone.hasError('maxlength')">phone no can have max 10 numbers</span>
+                     </div>
+               </mat-form-field>
+
+               <section class="example-section">
+                     <label class="example-margin">ROLE:  </label>
+                     
+                      <label class="radio-inline">
+                           <input class="form-check-input" type="radio" #roll="ngModel" [(ngModel)]="role" name="donor" value="i" checked (change)="onItemChange($event)" value="donor"/>Donor</label>
+                         <label class="radio-inline">
+                           <input class="form-check-input" type="radio" #roll="ngModel" [(ngModel)]="role" name="recipient" value="p"  (change)="onItemChange($event)" value="recipient"/>Recipient</label>
+               </section>
+
+            
+        </form>
+      </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button  (click)="register()" color="primary" [disabled]="form.invalid">REGISTER</button>
+          </mat-card-actions>
+</mat-card>
+</section>
+</div>

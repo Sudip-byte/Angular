@@ -1,0 +1,49 @@
+body{
+
+  background-image: url(../../assets/receiverland.jpg);
+  background-size: cover;
+  color: black;
+  
+}
+
+.my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  
+  }
+
+  .register {
+    color: black;
+  }
+
+  placeholder {
+    color: black;
+  }
+
+ mat-label {
+    color: black;
+  }
+   
+  .full-width {
+    width: 100%;
+  }
+  mat-card
+  {
+    background: transparent;
+  }
+
+  #doc {
+    position: relative;
+    right: 2px;
+  }
+
+  mat-checkbox {
+    position: relative;
+    left: 10px;
+  }
+
+  #upload {
+    position: relative;
+    left: 12px;
+  }

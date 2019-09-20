@@ -1,0 +1,40 @@
+<div class="center">
+    <mat-toolbar>
+        <span id="header">Edit Profile</span>
+      </mat-toolbar>
+      <mat-card class="my-card">
+        <mat-card-content>
+    
+            <form class="my-form">
+               <mat-form-field class="full-width">
+                   <mat-label>USER NAME</mat-label>
+                      <input [(ngModel)]="editDonorData.id"   matInput  value={{editDonorData.id}} type="text" name="UserName" required>
+                   </mat-form-field>
+                   <mat-form-field class="full-width">
+                      <mat-label>NAME</mat-label>
+                      <input [(ngModel)]="editDonorData.name"  matInput  value={{editDonorData.name}} type="text" name="name" required>
+                   </mat-form-field>
+                  
+                   <mat-form-field class="full-width">
+                      <mat-label>EMAIL ID</mat-label>
+                      <input [(ngModel)]="editDonorData.email" matInput  value={{editDonorData.email}} name="email" type="text" required>
+                   </mat-form-field>
+                   <mat-form-field class="full-width">
+                      <mat-label>PASSWORD</mat-label>
+                      <input [(ngModel)]="editDonorData.password" matInput  value={{editDonorData.password}}  name="password" type="password" required>
+                   </mat-form-field>
+                   <mat-form-field class="full-width">
+                    <mat-label>PHONE NUMBER </mat-label>
+                    <input [(ngModel)]="editDonorData.phoneNumber" matInput  value={{editDonorData.phoneNumber}} name="phoneNumber" type="number"  required>
+                 </mat-form-field>  
+              
+            </form>
+           
+        </mat-card-content>
+    <mat-card-actions>
+          
+            <button mat-raised-button (click)="editDonor()" color="primary">UPDATE</button>
+         </mat-card-actions>
+      </mat-card>
+      </div>
+      <router-outlet></router-outlet>

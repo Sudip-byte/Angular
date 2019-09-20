@@ -1,0 +1,23 @@
+<mat-card class="cause-card" >
+
+    <mat-card-header>
+        <mat-card-title>{{ cause.name }}</mat-card-title>
+        <mat-card-subtitle>{{ cause.causeDescription }} : {{cause.timestamp}}</mat-card-subtitle>
+        
+      </mat-card-header>
+    
+    <mat-card-actions>
+
+      <button 
+      mat-fab color="accent"
+      matTooltip="Donate to Cause"
+      matTooltipPosition="above"
+      (click)='donateTo(cause.name,cause.causeDescription,cause.id,cause.receiverId,cause.timestamp,cause.location)'
+      >
+        <mat-icon [inline]="true">add</mat-icon>
+
+      </button>
+
+    </mat-card-actions>
+
+  </mat-card>

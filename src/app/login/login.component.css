@@ -1,0 +1,60 @@
+mat-card{
+    color: black;
+    margin-top: 100px;
+    max-width: 200px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: transparent;
+    border: 3px solid white;
+ }
+ :placeholder-shown{
+    color: black;
+ }
+ .register{
+    padding-top: 20px;
+ }
+ .back{
+    background-image: url("../../assets/login2.jpg");
+    height:92%;
+    background-size:cover;
+    width:auto;
+    padding: 0;
+    background-position:50% 50%;
+  }
+  span{
+      color: red
+  }
+  button{
+      background-color:blue;
+  }
+
+  mat-form-field mat-label{
+      color: black;
+  }
+ 
+  .form-check-input, .radio-inline {
+    margin: 5px;
+  }
+  
+  .form-check-input {
+    position: relative;
+    bottom: 0.5px;
+  }
+
+  .example-section {
+      margin: 20px;
+      color:white;
+  }
+  mat-label,label{
+    font-size:16px;
+  }
+
+  mat-card-title{
+    
+    font-size:30px;
+  }
+  a{
+    color:white;
+    padding: 20px;
+    font-size: 20px;
+  }

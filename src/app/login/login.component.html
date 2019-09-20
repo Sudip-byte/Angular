@@ -1,0 +1,82 @@
+<div class="back">
+  <section class="track-container"
+  fxLayout
+  fxLayout.sm="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+  >
+  <mat-card class="example-card" fxFlex="20%">
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form #form="ngForm" class="example-form">
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <mat-label><mat-icon>email</mat-icon>Email</mat-label>
+                  
+                <input matInput placeholder="Enter registered email " #Email="ngModel" [(ngModel)]="email" name="email" required email>
+           
+                <div *ngIf=" Email.invalid && (Email.dirty || Email.touched)">
+                  <span *ngIf="Email.hasError('required')">Email is a required field</span>
+                  <span *ngIf="Email.hasError('email')">Enter valid email</span>
+                </div>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+            
+                <mat-label><mat-icon>visibility_off</mat-icon>Password</mat-label>
+                <input matInput placeholder="Enter Password" #pass="ngModel" [(ngModel)]="password" type="password" name="password" required>
+                <div *ngIf=" pass.invalid && (pass.dirty || pass.touched)">
+                    <span *ngIf="pass.hasError('required')">password is a required field</span>
+                 </div>
+              </mat-form-field></td>
+          </tr>
+          <tr>
+              <td>
+                <!-- <mat-form-field class="example-full-width">
+                  <mat-label>Role</mat-label>
+                <input matInput placeholder="Enter Role" #roll="ngModel" [(ngModel)]="role" name="role" required>
+                <div *ngIf=" roll.invalid && (roll.dirty || roll.touched)">
+                    <span *ngIf="roll.hasError('required')">Role is a required field</span>
+                  </div>
+                </mat-form-field> -->
+                <section class="example-section">
+                    <label class="example-margin">Role:  </label>
+                    
+                     <label class="radio-inline">
+                          <input class="form-check-input" type="radio" #roll="ngModel" [(ngModel)]="role" name="Donor" value="i" checked (change)="onItemChange($event)" value="Donor"/>Donor</label>
+                        <label class="radio-inline">
+                          <input class="form-check-input" type="radio" #roll="ngModel" [(ngModel)]="role" name="Recipient" value="p"  (change)="onItemChange($event)" value="Recipient"/>Recipient</label>
+               </section>
+              </td>
+            </tr>
+        </table>
+        </form>
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="login" mat-raised-button (click)="checkLogin()" [disabled]="form.invalid" >Login</button>
+      </mat-card-actions>
+    </mat-card>
+    </section>
+    <section class="register"
+    fxLayout
+    fxLayout.sm="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="0"
+    >
+      <a background-color="transparent" class="navLinks" selected [routerLink]="['/donor']" >Register as Donor</a>
+      <a background-color="transparent" class="navLinks" selected [routerLink]="['/receiver']" >Register as Receiver</a>
+  </section>
+ </div>
+
+
+

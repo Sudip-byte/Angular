@@ -1,0 +1,69 @@
+<body>
+<section class="register"
+  fxLayout
+  fxLayout.sm="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+  > 
+
+<mat-card class="register">
+<mat-card-header text-align="center">
+    <h3><b>Welcome to Receiver Landing</b></h3>
+</mat-card-header>
+<mat-card-content>
+        <form class="my-form">
+           <mat-form-field class="full-width">
+                  <mat-label>ID</mat-label>
+                  <input  matInput  placeholder="Choose yourself an cause id" [(ngModel)]="id" name="id"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>CAUSE NAME</mat-label>
+                  <input  matInput  placeholder="Enter the cause name " [(ngModel)]="name" name="name"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>CAUSE TYPE</mat-label>
+                  <input  matInput  placeholder="Enter the cause type" [(ngModel)]="causeType" name="causeType"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>CAUSE DESCRIPTION</mat-label>
+                  <input  matInput  placeholder="Enter the cause description" [(ngModel)]="causeDescription" name="causeDescription" required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>TIME STAMP</mat-label>
+                  <input  matInput  placeholder="Enter the time " [(ngModel)]="timestamp"  name="timestamp" required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                     <mat-label>LOCATION</mat-label>
+                     <input  matInput  placeholder="Enter your location" [(ngModel)]="location" name="location" required>
+
+                     
+                  </mat-form-field>
+                  <mat-label id="doc">DOCUMENTS</mat-label>
+                     <mat-checkbox>Pan Card</mat-checkbox>
+                     <mat-checkbox>Aadhar Card</mat-checkbox>
+                     <mat-checkbox>Driving Licence</mat-checkbox>
+                     <button id="upload">Upload</button>
+                    
+        </form>
+      </mat-card-content>
+
+          <mat-card-actions>
+            <button mat-raised-button (click)="addCause()" color="primary">ADD CAUSE</button>
+          </mat-card-actions>
+</mat-card>
+</section>
+
+
+<section class="editbutton"
+  fxLayout
+  fxLayout.sm="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+  > 
+    <mat-chip color="accent" class="navLinks" selected [routerLink]="['/editreceiver']" >Edit Profile</mat-chip>
+
+</section>
+</body>
+ 
